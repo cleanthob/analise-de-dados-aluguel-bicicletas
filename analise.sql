@@ -14,7 +14,7 @@ SELECT
 	MIN(duration) / 60 AS menor_tempo,
 	AVG(duration) / 60 AS tempo_medio,
 	MAX(duration) / 60 AS maior_tempo,
-	STDEV(duration) AS desvio_padrao
+	STDEV(duration) AS desvio_padrao -- Se não funcionar use: sqrt(AVG(duration * duration) - AVG(duration) * AVG(duration)) AS desvio_padrao
 FROM trips
 WHERE duration >= (60 * 5) AND duration <= 500000;
 
